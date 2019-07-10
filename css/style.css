@@ -114,6 +114,13 @@ a:hover, a:focus, a:active {
   position: absolute;
 }
 
+.probootstrap-header-portfolio {
+  padding-top: 30px;
+  width: 100%;
+  z-index: 4;
+  position: fixed;
+}
+
 .probootstrap-feature-first {
   position: relative;
   background: #ecedee;
