@@ -529,6 +529,134 @@ a:hover, a:focus, a:active {
   margin-left: 20px;
 }
 
+.probootstrap-portfolio {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+}
+
+.probootstrap-portfolio .probootstrap-scroll-down {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: .9s all ease-out;
+  transition: .9s all ease-out;
+  bottom: 20px;
+  color: #000000;
+  opacity: 1;
+  visibility: visible;
+}
+
+.probootstrap-portfolio .probootstrap-scroll-down.probootstrap-sleep {
+  bottom: -50px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.probootstrap-portfolio .probootstrap-portfolio-text {
+  margin-top: 0px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .probootstrap-portfolio .probootstrap-portfolio-text {
+    height: inherit !important;
+    margin-top: inherit !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .probootstrap-portfolio {
+    height: inherit !important;
+    padding-top: 7em;
+    padding-bottom: 7em;
+  }
+}
+
+.probootstrap-portfolio:before {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: #000000;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$firstcolor, endColorstr=$secondcolor, GradientType=1 );
+  opacity: 0;
+}
+
+.probootstrap-portfolio > .container-fluid, .probootstrap-portfolio > .container {
+  position: relative;
+  z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .probootstrap-portfolio {
+    padding: 7em 0 7em 0;
+  }
+}
+
+.probootstrap-portfolio h1 {
+  font-size: 67px;
+  color: #000000;
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+@media screen and (max-width: 768px) {
+  .probootstrap-portfolio h1 {
+    font-size: 36px;
+  }
+}
+
+.probootstrap-portfolio .probootstrap-subtitle {
+  max-width: 700px;
+}
+
+.probootstrap-portfolio .probootstrap-subtitle h2, .probootstrap-portfolio .probootstrap-subtitle .heading-with-icon {
+  line-height: 1.55;
+  color: #3e3e3ee6;
+  font-weight: 300;
+}
+
+.probootstrap-portfolio .probootstrap-subtitle h2 a, .probootstrap-portfolio .probootstrap-subtitle .heading-with-icon a {
+  color: rgb(0, 0, 0);
+}
+
+.probootstrap-portfolio .probootstrap-subtitle h2 a:hover, .probootstrap-portfolio .probootstrap-subtitle .heading-with-icon a:hover {
+  color: #3e3e3ee6;
+}
+
+.probootstrap-portfolio .watch-intro {
+  font-size: 23px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.probootstrap-portfolio .watch-intro a {
+  color: #000000;
+}
+
+.probootstrap-portfolio .watch-intro a i {
+  position: relative;
+  top: 2px;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.probootstrap-portfolio .watch-intro a:hover i {
+  margin-left: 20px;
+}
+
 .probootstrap-burger-menu {
   display: inline-block;
   width: 18px;
@@ -621,7 +749,7 @@ a:hover, a:focus, a:active {
 }
 
 .btn.btn-lg {
-  line-height: 1.5;
+  line-height: 1.0;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -633,18 +761,49 @@ a:hover, a:focus, a:active {
 }
 
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
+  background: #595959;
+  color: #ffffff;
+  border: 1px solid #595959;
+}
+
+.btn.btn-primary:focus, .btn.btn-primary:active {
+  outline: none;
+  border: 1px solid #595959;
+}
+
+.btn.btn-primary-prev {
+  background: transparent;
+  border: 1px solid #cdcdcd;
+  color: #cdcdcd;
+}
+
+.btn.btn-primary-prev:hover, .btn.btn-primary-prev:active, .btn.btn-primary-prev:focus {
+  background: #cdcdcd;
+  color: #ffffff;
+  border: 1px solid #cdcdcd;
+}
+
+.btn.btn-primary-prev:focus, .btn.btn-primary-prev:active {
+  outline: none;
+  border: 1px solid #cdcdcd;
+}
+
+.btn.btn-primary-solid {
+  background: #595959;
+  border: 1px solid #595959;
+  color: #ffffff;
+}
+
+.btn.btn-primary-solid:hover, .btn.btn-primary-prev-solid:active, .btn.btn-primary-prev-solid:focus {
   background: #000000;
   color: #ffffff;
   border: 1px solid #000000;
 }
 
-.btn.btn-primary:focus, .btn.btn-primary:active {
+.btn.btn-primary-solid:focus, .btn.btn-primary-prev-solid:active {
   outline: none;
   border: 1px solid #000000;
 }
-
-
-
 
 .btn.btn-header {
   background: transparent;
@@ -685,20 +844,38 @@ a:hover, a:focus, a:active {
 
 .btn.btn-ghost.btn-ghost-white {
   background: transparent;
-  border: 1px solid #ffffff;
+  border: 1px solid #cdcdcd;
   color: #ffffff;
 }
 
 .btn.btn-ghost.btn-ghost-white:hover {
-  background: #ffffff;
+  background: #cdcdcd;
   color: #555555;
 }
 
 .btn.btn-ghost.btn-ghost-white:focus, .btn.btn-ghost.btn-ghost-white:active {
   outline: none;
-  background: #ffffff;
+  background: #cdcdcd;
   color: #555555;
-  border: 1px solid #ffffff;
+  border: 1px solid #cdcdcd;
+}
+
+.btn.btn-ghost.btn-ghost-white-solid {
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+  color: #555555;
+}
+
+.btn.btn-ghost.btn-ghost-white-solid:hover {
+  background: #cdcdcd;
+  color: #555555;
+}
+
+.btn.btn-ghost.btn-ghost-white-solid:focus, .btn.btn-ghost.btn-ghost-white-solid:active {
+  outline: none;
+  background: #cdcdcd;
+  color: #555555;
+  border: 1px solid #cdcdcd;
 }
 
 .btn.btn-black {
