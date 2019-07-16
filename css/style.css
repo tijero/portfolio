@@ -13,6 +13,24 @@
   font-style: normal;
 }
 
+.sectionquote {
+  width: 100%;
+}
+
+.sectionproblem {
+  width: 40%;
+  margin-bottom: -30px;
+}
+
+.sectionimage {
+  width: 10%;
+  margin-bottom: -30px;
+}
+
+img {
+  vertical-align: bottom;
+}
+
 html {
   overflow-x: hidden;
   font-size: 1em;
@@ -333,7 +351,7 @@ a:hover, a:focus, a:active {
 
 .probootstrap-main-nav-portfolio li a {
   padding: 10px 0;
-  color: #000000;
+  color: #ffffff;
   border-bottom: 2px solid transparent;
 }
 
@@ -344,7 +362,7 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-main-nav-portfolio li a:hover {
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #ffffff;
 }
 
 .probootstrap-main-nav-portfolio li.probootstrap-cta {
@@ -352,14 +370,14 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-main-nav li.probootstrap-cta a {
-  border: 2px solid #000000;
+  border: 2px solid #ffffff;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 4px;
 }
 
 .probootstrap-main-nav-portfolio li.probootstrap-cta a:hover {
-  background: #000000;
+  background: #ffffff;
   color: #555555;
 }
 
@@ -374,11 +392,11 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-main-nav-portfolio li.active a {
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #ffffff;
 }
 
 .probootstrap-main-nav-portfolio li.active a:hover {
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #ffffff;
 }
 
 .probootstrap-mobile-menu-active .probootstrap-main-nav-portfolio li {
@@ -664,6 +682,8 @@ a:hover, a:focus, a:active {
   margin-left: 20px;
 }
 
+<!-- START: BURGER HOME-->
+
 .probootstrap-burger-menu {
   display: inline-block;
   width: 18px;
@@ -735,6 +755,85 @@ a:hover, a:focus, a:active {
   top: 30px;
   right: 20px;
 }
+
+<!-- END: BURGER HOME-->
+
+<!-- START: BURGER PORTFOLIO-->
+
+.probootstrap-burger-menu-portfolio {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.probootstrap-burger-menu-portfolio i {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  color: #000000;
+  font: bold 14px/.4 Helvetica, arial;
+  text-transform: uppercase;
+  text-indent: -55px;
+  background: #000000;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.probootstrap-burger-menu-portfolio i::before, .probootstrap-burger-menu-portfolio i::after {
+  content: '';
+  width: 18px;
+  height: 2px;
+  background: #000000;
+  position: absolute;
+  left: 0;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.probootstrap-burger-menu-portfolio i::before {
+  top: -7px;
+}
+
+.probootstrap-burger-menu-portfolio i::after {
+  bottom: -7px;
+}
+
+.probootstrap-burger-menu-portfolio:hover i::before {
+  top: -10px;
+}
+
+.probootstrap-burger-menu-portfolio:hover i::after {
+  bottom: -10px;
+}
+
+.probootstrap-burger-menu-portfolio.active i {
+  background: transparent;
+}
+
+.probootstrap-burger-menu-portfolio.active i::before {
+  top: 0;
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.probootstrap-burger-menu-portfolio.active i::after {
+  bottom: 0;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+.probootstrap-burger-menu-portfolio {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+<!-- END: BURGER PORTFOLIO-->
+
 
 .btn {
   border: none;
